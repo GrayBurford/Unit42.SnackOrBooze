@@ -3,17 +3,24 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavItem } from "reactstrap";
 
+// Renders NavBar component at top of page, with links to home, snacks, drinks, or add new item
 function NavBar() {
   return (
     <div>
       <Navbar expand="md">
         <NavLink exact to="/" className="navbar-brand">
-          Snack or Booze
+          Snack-or-Booze
         </NavLink>
 
         <Nav className="ml-auto" navbar>
           <NavItem>
             <NavLink to="/snacks">Snacks</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/drinks">Drinks</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/newitem">Add Item</NavLink>
           </NavItem>
         </Nav>
       </Navbar>
